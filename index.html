@@ -18,7 +18,7 @@
                     v-bind:value="inputValue"
                     v-on:input="inputChangeHandler"
                 />
-                <button class="btn">Add</button>
+                <button class="btn" v-on:click="addNewNote">Add</button>
                 <hr/>
                 <ul class="list">
                     <li class="list-item" v-for="todo in todoList">

@@ -10,6 +10,10 @@ const App = {
     methods: {
         inputChangeHandler(e) {
             this.inputValue = e.target.value
+        },
+        addNewNote() {
+            this.todoList.push(this.inputValue),
+            this.inputValue = ''
         }
     }
 }
