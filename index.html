@@ -25,7 +25,12 @@
                 <hr/>
                 <ul class="list" v-if:="todoList.length !==0">
                     <li class="list-item" v-for="(todo, idx) in todoList">
-                        {{idx + 1}}. {{toUpperCase(todo)}}
+                        <!-- <span :class="todo.length >5 ? 'primary' : 'bold'">{{idx + 1}}. {{toUpperCase(todo)}}</span> -->
+                        <span :class="['bold', {'primary':todo.length >5}]">{{idx + 1}}. {{toUpperCase(todo)}}</span>
+                        <!-- <span :class="{
+                            'primary': true,
+                            'bold': todo.length >5
+                        }">{{idx + 1}}. {{toUpperCase(todo)}}</span> -->
                         <button class="btn danger" @click="removeNote(idx)">delete</button>
                     </li>
                     <li>
