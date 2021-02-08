@@ -1,7 +1,9 @@
 const App = {
     data() {
         return {
-            counter: 0
+            title: 'To-do',
+            placeholder: 'Add new item',
+            inputValue:''
         }
     }
 }

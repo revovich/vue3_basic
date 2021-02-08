@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-    <div class="container pt-5" id="app">
-        <div class="card center">
-            <h1>Counter : {{ counter }}</h1>
-            <div class="">
-                <button class="btn primary">+</button>
-                <button class="btn danger">-</button>
+    <div class="container" id="app">
+        <div class="card">
+            <h1>{{ title }}</h1>
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    v-bind:placeholder="placeholder" 
+                    v-bind:value="inputValue"
+                />
+                <button class="btn">Add</button>
+                <h4>inputValue: {{inputValue}}</h4>
+                <hr/>
             </div>
         </div>
     </div>
