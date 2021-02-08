@@ -23,6 +23,11 @@ const App = {
         removeNote(idx) {
             this.todoList.splice(idx, 1)
         }
+    },
+    computed: {
+        doubleCount() {
+            return this.todoList.length * 2
+        }
     }
 }
 

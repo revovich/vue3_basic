@@ -14,17 +14,20 @@
             <div class="form-control">
                 <input 
                     type="text" 
-                    v-bind:placeholder="placeholder" 
-                    v-bind:value="inputValue"
-                    v-on:input="inputChangeHandler"
-                    v-on:keypress.enter="addNewNote"
+                    :placeholder="placeholder" 
+                    :value="inputValue"
+                    @input="inputChangeHandler"
+                    @keypress.enter="addNewNote"
                 />
-                <button class="btn" v-on:click="addNewNote">Add</button>
+                <button class="btn" @click="addNewNote">Add</button>
                 <hr/>
                 <ul class="list" v-if:="todoList.length !==0">
                     <li class="list-item" v-for="(todo, idx) in todoList">
-                        {{idx + 1}}{{toUpperCase(todo)}}
-                        <button class="btn danger" v-on:click="removeNote(idx)">delete</button>
+                        {{idx + 1}}. {{toUpperCase(todo)}}
+                        <button class="btn danger" @click="removeNote(idx)">delete</button>
+                    </li>
+                    <li>
+                        <strong>Total: {{todoList.length}} | Double num: {{doubleCount}}</strong>
                     </li>
                 </ul>
                 <div v-else>Nothing to-do. Great</div>
