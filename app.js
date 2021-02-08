@@ -14,6 +14,9 @@ const App = {
         addNewNote() {
             this.todoList.push(this.inputValue),
             this.inputValue = ''
+        },
+        removeNote(idx) {
+            this.todoList.splice(idx, 1)
         }
     }
 }

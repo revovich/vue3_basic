@@ -17,12 +17,14 @@
                     v-bind:placeholder="placeholder" 
                     v-bind:value="inputValue"
                     v-on:input="inputChangeHandler"
+                    v-on:keypress.enter="addNewNote"
                 />
                 <button class="btn" v-on:click="addNewNote">Add</button>
                 <hr/>
                 <ul class="list">
-                    <li class="list-item" v-for="todo in todoList">
-                        {{todo}}
+                    <li class="list-item" v-for="(todo, idx) in todoList">
+                        {{idx + 1}}{{todo}}
+                        <button class="btn danger" v-on:click="removeNote(idx)">delete</button>
                     </li>
                 </ul>
             </div>
