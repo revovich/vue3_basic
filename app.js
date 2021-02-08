@@ -5,6 +5,11 @@ const App = {
             placeholder: 'Add new item',
             inputValue:''
         }
+    },
+    methods: {
+        inputChangeHandler(e) {
+            this.inputValue = e.target.value
+        }
     }
 }
 
