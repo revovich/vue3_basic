@@ -23,7 +23,7 @@
                 <hr/>
                 <ul class="list" v-if:="todoList.length !==0">
                     <li class="list-item" v-for="(todo, idx) in todoList">
-                        {{idx + 1}}{{todo}}
+                        {{idx + 1}}{{toUpperCase(todo)}}
                         <button class="btn danger" v-on:click="removeNote(idx)">delete</button>
                     </li>
                 </ul>
