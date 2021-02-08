@@ -8,9 +8,6 @@ const App = {
         }
     },
     methods: {
-        inputChangeHandler(e) {
-            this.inputValue = e.target.value
-        },
         addNewNote() {
             if (this.inputValue !== '') {
                 this.todoList.push(this.inputValue),
@@ -27,6 +24,11 @@ const App = {
     computed: {
         doubleCount() {
             return this.todoList.length * 2
+        }
+    },
+    watch: {
+        inputValue(value) {
+            console.log(value)
         }
     }
 }
