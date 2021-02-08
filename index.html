@@ -19,8 +19,12 @@
                     v-on:input="inputChangeHandler"
                 />
                 <button class="btn">Add</button>
-                <h4>inputValue: {{inputValue}}</h4>
                 <hr/>
+                <ul class="list">
+                    <li class="list-item" v-for="todo in todoList">
+                        {{todo}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

@@ -3,7 +3,8 @@ const App = {
         return {
             title: 'To-do',
             placeholder: 'Add new item',
-            inputValue:''
+            inputValue:'',
+            todoList: ['note 1', 'note 2', 'note 42']
         }
     },
     methods: {
