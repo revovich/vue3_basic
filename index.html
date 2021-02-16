@@ -25,10 +25,17 @@
             class="btn" 
             @click="title='New title'"
         >Change title</button> -->
-        <ul class="list">
-            <li class="list-item" v-for="(item, idx) in 7">{{item}}</li>
+        <ul class="list" v-if="array.length">
+            <!-- <li class="list-item" v-for="(item, idx) in 7">{{item}}</li> -->
+            <li class="list-item" 
+            v-for="(item, idx) in array" 
+            @click="array.splice(idx,1)"
+            :key="item"
+            >{{item}}<input type="text" @click.stop>
+            </li>
             <li class="list-item" v-for="value in person">{{value}}</li>
         </ul>
+        <h3 v-else>Nothing to display</h3>
     </div>
     </div>
 
