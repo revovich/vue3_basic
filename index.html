@@ -28,7 +28,7 @@
         <ul class="list" v-if="array.length">
             <!-- <li class="list-item" v-for="(item, idx) in 7">{{item}}</li> -->
             <li class="list-item" 
-            v-for="(item, idx) in array" 
+            v-for="(item, idx) in evenItems" 
             @click="array.splice(idx,1)"
             :key="item"
             >{{item}}<input type="text" @click.stop>
