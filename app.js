@@ -9,6 +9,12 @@ Vue.createApp({
         },
         array:[1,2,3,5,8,13]
     }),
+    methods: {
+        addItem (){
+            this.array.unshift(this.$refs.myInput.value)
+            this.$refs.myInput.value = ''
+        }
+    },
     computed: {
         evenItems() {
             return this.array.filter(i => i % 2 === 0)

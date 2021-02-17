@@ -25,10 +25,13 @@
             class="btn" 
             @click="title='New title'"
         >Change title</button> -->
+        <div class="form-control">
+            <input type="text" @keyup.enter="addItem($event)" ref="myInput">
+        </div>
         <ul class="list" v-if="array.length">
             <!-- <li class="list-item" v-for="(item, idx) in 7">{{item}}</li> -->
             <li class="list-item" 
-            v-for="(item, idx) in evenItems" 
+            v-for="(item, idx) in array" 
             @click="array.splice(idx,1)"
             :key="item"
             >{{item}}<input type="text" @click.stop>
