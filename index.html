@@ -32,7 +32,7 @@
             <!-- <li class="list-item" v-for="(item, idx) in 7">{{item}}</li> -->
             <li class="list-item" 
             v-for="(item, idx) in array" 
-            @click="array.splice(idx,1)"
+            @click.right.prevent="removeItem(i), log(item)"
             :key="item"
             >{{item}}<input type="text" @click.stop>
             </li>

@@ -10,9 +10,15 @@ Vue.createApp({
         array:[1,2,3,5,8,13]
     }),
     methods: {
-        addItem (){
+        addItem (event){
             this.array.unshift(this.$refs.myInput.value)
             this.$refs.myInput.value = ''
+        },
+        removeItem (i) {
+            this.array.splice(i,1)
+        },
+        log(item){
+            console.log('Log from Vue', item)
         }
     },
     computed: {
